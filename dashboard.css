@@ -1,0 +1,73 @@
+html {
+    background-color: #DCF2F1;
+}
+
+h1 {
+    text-align: center;
+    color: #0F1035;
+}
+
+#outputContainer {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    margin: 0 auto; /* Centers the container horizontally */
+    margin-top: 20px;
+    width: 60%; /* Adjust the width as needed */
+    background: rgba(255, 255, 255, 0.35);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.175);
+    border-radius: 4%;
+    align-items: center;
+    justify-content: center; /* Aligns all items to the center */
+    font-size: 2rem;
+}
+
+#output {
+    display: flex; /* Display image and text in a row */
+    align-items: center; /* Align items vertically */
+}
+
+img {
+    height: 100px;
+    width: 100px;
+    margin-right: 20px; /* Add some space between image and text */
+}
+
+#userDetails {
+    text-align: left; /* Align text to the left */
+    color: #0F1035;
+}
+
+#buttonContainer {
+    margin-top: 20px; /* Adds space between text/image and buttons */
+    display: flex;
+    flex-direction: column; /* Arrange buttons vertically */
+    align-items: center; /* Align buttons horizontally */
+}
+
+button {
+    margin-bottom: 10px; /* Adds space between buttons */
+    background-color: #365486;
+    border: 2px solid #0F1035;
+    border-radius: 30px;
+    box-shadow: #0F1035 4px 4px 0 0;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  
+  
+  
+    box-shadow: #0F1035 2px 2px 0 0;
+    transform: translate(2px, 2px);
+}

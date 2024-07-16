@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #DCF2F1;
+
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100vh; /* Full viewport height */
+    
+}
+
+#reader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:500px;
+    background: rgba(255,255,255,0.2);
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 4%;
+    -webkit-box-shadow: 3px 3px 10px 3px #B5C18E;
+    -moz-box-shadow: 3px 3px 10px 3px #B5C18E;
+    box-shadow: 3px 3px 10px 3px #B5C18E;
+}
+img{
+    height: 300px;
+    width: 300px;
+}
+#html5-qrcode-button-camera-start{
+    
+      background-color: #365486;
+      border: 2px solid #0F1035;
+      border-radius: 30px;
+      box-shadow: #0F1035 4px 4px 0 0;
+      color: white;
+      cursor: pointer;
+      display: inline-block;
+      font-weight: 600;
+      font-size: 18px;
+      padding: 0 18px;
+      line-height: 50px;
+      text-align: center;
+      text-decoration: none;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      margin-bottom: 30px;
+    
+    
+    
+      box-shadow: #0F1035 2px 2px 0 0;
+      transform: translate(2px, 2px);
+    
+    
+   
+    
+}
+
+#html5-qrcode-button-camera-stop{
+    background-color: #365486;
+    border: 2px solid #0F1035;
+    border-radius: 30px;
+    box-shadow: #0F1035 4px 4px 0 0;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-bottom: 30px;
+  
+  
+  
+    box-shadow: #0F1035 2px 2px 0 0;
+    transform: translate(2px, 2px);
+}
+#html5-qrcode-anchor-scan-type-change{
+    color: #0F1035;
+}
+
+#result {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 20px; /* Spacing between QR code and result */
+}
+
+#dashboardButton {
+    display: none;
+    margin-top: 20px; /* Spacing between result and button */
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #365486;
+    border: 2px solid #0F1035;
+    border-radius: 30px;
+    box-shadow: #0F1035 4px 4px 0 0;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-bottom: 30px;
+    transition: background-color 0.3s; /* Smooth transition */
+    
+}   
+
+#dashboardButton:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}

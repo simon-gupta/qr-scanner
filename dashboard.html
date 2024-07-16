@@ -1,0 +1,106 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <link rel="stylesheet" href="logind.css">
+    <!-- Include Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js"></script>
+    <!-- Include Firebase configuration -->
+    <script src="firebase-config.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase-auth.js"></script>
+    <link rel="stylesheet" href="dashboard.css">
+    
+  </head>
+  <body>
+    <div class="container">
+      <h1>Account Details</h1>
+      
+    </div>
+    <div id="outputContainer">
+      <img src="./icons8-user-40.png">
+
+      <div id="output">
+        <div id="userDetails"></div>
+      </div>
+      <div id="buttonContainer">
+        <button id="Withdraw">Withdraw Cash</button>
+      <button id="Deposit">Deposit</button>
+      <button id="CheckBalance">Check Balance</button>
+      </div>
+      
+    </div>
+    
+    
+  
+    <div class="alert" style="display: none;">Login successful!</div>
+    
+  <div id="userDetails"></div>
+  
+    <script>
+  const firebaseConfig = {
+  apiKey: "AIzaSyBpeYB8Om12ogbFUmrGO3AWEKUSohWik8Q",
+  authDomain: "contact-form-13a89.firebaseapp.com",
+  databaseURL: "https://contact-form-13a89-default-rtdb.firebaseio.com",
+  projectId: "contact-form-13a89",
+  storageBucket: "contact-form-13a89.appspot.com",
+  messagingSenderId: "343018464263",
+  appId: "1:343018464263:web:96681f6393407632bc76a2"
+  
+  };
+  
+  firebase.initializeApp(firebaseConfig);
+  
+  // Reference to the Firebase database
+  var database = firebase.database();
+
+// Function to retrieve information for a specific key
+function getInfoForKey(key) {
+    // Reference to the specific key
+    var keyRef = database.ref('contactForm/' + key);
+
+    // Fetch data for the key
+    keyRef.once('value')
+        .then(function(snapshot) {
+            var data = snapshot.val();
+            var fname=data.firstName;
+            var lname=data.lastName;
+            var email=data.email;
+            var ph=data.phoneNumber;
+            console.log(data);
+            console.log(lname);
+            console.log(fname);
+            console.log(email);
+            console.log(ph);
+         
+            var outputElement = document.getElementById("output");
+                    outputElement.innerHTML = "First Name: " + fname + "<br>";
+                    outputElement.innerHTML += "Last Name: " + lname + "<br>";
+                    outputElement.innerHTML += "Email: " + email + "<br>";
+                    outputElement.innerHTML += "Phone Number: " + ph + "<br>";
+                })
+        .catch(function(error) {
+            console.error("Error retrieving data:", error);
+        });
+}
+
+var myVariable = localStorage.getItem('myVariable');
+        
+        // Now you can use the variable in dashboard.html
+        console.log(myVariable);
+
+// Call the function with the specific key you want to retrieve information for
+getInfoForKey(myVariable);
+
+var outputElement = document.getElementById("output");
+outputElement.innerHTML = fname;
+outputElement.innerHTML = lname;
+outputElement.innerHTML = email;
+outputElement.innerHTML = ph;
+
+      
+    </script>
+  
+  
+  </body></html>
